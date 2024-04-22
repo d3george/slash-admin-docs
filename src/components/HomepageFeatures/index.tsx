@@ -4,52 +4,66 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '📚 最新技术栈',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        基于React 18、Vite、TypeScript、 Ant Design 5.0等最新技术栈开发
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '👍 轻量化',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        美观、现代化、干净的启动模板
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '🛠️ 丰富的组件',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        大量封装好的内置基本组件
+      </>
+    ),
+  },
+  {
+    title: '🎨 主题配置',
+    description: (
+      <>
+        丰富的主题配置和黑暗主题配置
+      </>
+    ),
+  },
+  {
+    title: '🔑 权限管理',
+    description: (
+      <>
+        内置权限管理
+      </>
+    ),
+  },
+  {
+    title: '📱 移动端适配',
+    description: (
+      <>
+        所有页面均适配移动端
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
+    <div className={clsx('col col--4 margin-bottom--lg')}>
+      <div className="text--left padding-horiz--md">
         <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <p className='text--light'>{description}</p>
       </div>
     </div>
   );

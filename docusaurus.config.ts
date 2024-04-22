@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Slash Admin',
-  tagline: "一款基于最新React技术栈开发的现代化的后台管理系",
+  tagline: "一款基于最新React技术栈开发的现代化的后台管理系统",
   favicon: 'img/logo.png',
 
   // Set the production url of your site here

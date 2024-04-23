@@ -65,6 +65,11 @@ const config: Config = {
           position: 'left',
         },
         {
+          label: 'Discord',
+          href: 'https://discord.com/invite/fXemAXVNDa',
+          position: 'right',
+        },
+        {
           label: 'GitHub',
           href: 'https://github.com/d3george/slash-admin',
           position: 'right',

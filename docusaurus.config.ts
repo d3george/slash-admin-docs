@@ -70,7 +70,6 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
         },
-        {to: '/blog', label: '博客', position: 'left'},
         {
           label: 'GitHub',
           href: 'https://github.com/d3george/slash-admin',
@@ -107,10 +106,10 @@ const config: Config = {
         {
           title: '更多',
           items: [
-            {
-              label: '博客',
-              href: '/blog',
-            },
+            // {
+            //   label: '博客',
+            //   href: '/blog',
+            // },
           ],
         },
       ],

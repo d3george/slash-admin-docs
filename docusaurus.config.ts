@@ -25,8 +25,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -40,13 +40,7 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -85,7 +79,7 @@ const config: Config = {
           items: [
             {
               label: '文档',
-              to: '/docs/intro',
+              to: '/docs/getting-started/intro',
             },
           ],
         },
@@ -105,12 +99,7 @@ const config: Config = {
         },
         {
           title: '更多',
-          items: [
-            // {
-            //   label: '博客',
-            //   href: '/blog',
-            // },
-          ],
+          items: [],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Slash Admin. Built with Docusaurus.`,

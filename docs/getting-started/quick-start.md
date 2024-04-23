@@ -37,8 +37,10 @@ pnpm install
 ```bash
 pnpm dev
 ```
-
-
+访问 http://localhost:3001 查看您的应用程序。
+:::tip
+启动端口可在`vite.config.ts`中修改
+:::
 ## 目录说明
 ```bash
 .

@@ -36,7 +36,8 @@ http-server ./stats.html
 
 
 ## 部署
-本项目为纯前端展示项目，适合部署为静态站点，比如：Github Pages 和 Vercel
+因为是纯前端展示项目，所以适合部署为静态站点，比如：Github Pages 和 Vercel。
 :::tip 提示
 Vite文档中有一章专门介绍如何 [部署静态站点](https://cn.vitejs.dev/guide/static-deploy.html)
 :::
+

@@ -140,3 +140,61 @@ export function getRoutesFromModules() {
 ```
 
 
+
+## 内置角色
+为方便展示权限功能，项目内部定义了两个角色`admin`和`test`
+
+![](./assets/admin_test.png)
+
+```js title='src/_mock/assets.js'
+export const DEFAULT_USER = {
+  id: 'b34719e1-ce46-457e-9575-99505ecee828',
+  // highlight-next-line
+  username: 'admin',
+  email: faker.internet.email(),
+  avatar: faker.image.avatarLegacy(),
+  createdAt: faker.date.anytime(),
+  updatedAt: faker.date.recent(),
+  password: 'demo1234',
+  role: ADMIN_ROLE,
+  // highlight-next-line
+  permissions: ADMIN_ROLE.permission,
+};
+export const TEST_USER = {
+  id: 'efaa20ea-4dc5-47ee-a200-8a899be29494',
+  // highlight-next-line
+  username: 'test',
+  password: 'demo1234',
+  email: faker.internet.email(),
+  avatar: faker.image.avatarLegacy(),
+  createdAt: faker.date.anytime(),
+  updatedAt: faker.date.recent(),
+  role: TEST_ROLE,
+  // highlight-next-line
+  permissions: TEST_ROLE.permission,
+};
+```
+
+其权限设置如下：
+```js title='src/_mock/assets.js'
+const ADMIN_ROLE = {
+  id: '4281707933534332',
+  name: 'Admin',
+  label: 'admin',
+  status: BasicStatus.ENABLE,
+  order: 1,
+  desc: 'Super Admin',
+  // highlight-next-line
+  permission: PERMISSION_LIST,
+};
+const TEST_ROLE = {
+  id: '9931665660771476',
+  name: 'Test',
+  label: 'test',
+  status: BasicStatus.ENABLE,
+  order: 2,
+  desc: 'test',
+  // highlight-next-line
+  permission: [DASHBOARD_PERMISSION, COMPONENTS_PERMISSION, FUNCTIONS_PERMISSION],
+};
+```

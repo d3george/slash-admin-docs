@@ -194,8 +194,8 @@ export type AppRouteObject = {
   children?: AppRouteObject[];
 } & Omit<RouteObject, 'children'>;
 ```
-我们拓展基于`React Router`的 `RouteObject`类型, 拓展了
-+ order: 定义路由队员菜单的顺序
+我们基于`React Router`的 `RouteObject`类型, 拓展了
++ order: 定义路由菜单的顺序
 + meta: 路由相关元数据
 
 ### RouteMeta

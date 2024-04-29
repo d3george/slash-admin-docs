@@ -98,8 +98,11 @@ export function usePermissionRoutes() {
 ```
 
 ## 静态路由表
+
+:::tip 
 因为项目采用的是动态路由表的方式，路由是根据权限动态生成的，并不是你在`src/router/routes/modules`目录下配置的路由，因此这就是个无用的目录，之所以不删除，是为了方便想使用静态路由表的用户。
 
+:::
 那如何切换回静态路由表呢？
 
 很简单，直接修改 `usePermissionRoutes`函数

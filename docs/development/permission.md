@@ -105,26 +105,26 @@ export function usePermissionRoutes() {
 :::
 那如何切换回静态路由表呢？
 
-很简单，直接修改 `usePermissionRoutes`函数
+
+很简单，直接修改`.env`即可
+```
+# 权限路由模式 permission | module
+VITE_APP_ROUTER_MODE = module
+```
+都是在这个函数里管理的
 ```tsx
 export function usePermissionRoutes() {
-  // highlight-start
-  return useMemo(() => {
-    return getRoutesFromModules();
-  }, []);
-  // highlight-end
+	if (ROUTE_MODE === "module") {
+		return getRoutesFromModules();
+	}
 
+	const permissions = useUserPermission();
+	return useMemo(() => {
+		if (!permissions) return [];
 
-//   const permissions = useUserPermission();
-
-//   return useMemo(() => {
-//     const flattenedPermissions = flattenTrees(permissions!);
-//     const permissionRoutes = transformPermissionToMenuRoutes(
-//       permissions || [],
-//       flattenedPermissions,
-//     );
-//     return [...permissionRoutes];
-//   }, [permissions]);
+		const flattenedPermissions = flattenTrees(permissions);
+		return transformPermissionsToRoutes(permissions, flattenedPermissions);
+	}, [permissions]);
 }
 ```
 其中`getRoutesFromModules`的作用就是基于 `src/router/routes/modules` 文件结构生成路由
